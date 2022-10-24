@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const node_assert_1 = __importDefault(require("node:assert"));
+var node_assert_1 = __importDefault(require("node:assert"));
 // npm init -y
 // npm install @types/node
 // Run this file in two ways:
@@ -17,7 +17,7 @@ function toTitleCase(title) {
     return title
         .toLowerCase()
         .split(" ")
-        .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
+        .map(function (word) { return word[0].toUpperCase() + word.substring(1).toLowerCase(); })
         .join(" ");
 }
 node_assert_1.default.equal(toTitleCase("war AND peace"), "War And Peace");
@@ -27,7 +27,7 @@ console.log("toTitleCase passes.");
 // // // This will count the number of separate words within a string. Words are
 // // // delimited by spaces, dashes (-), or underscores (_).
 function countWords(title) {
-    const words = title.split(/[ _-]/);
+    var words = title.split(/[ _-]/);
     return words.length;
 }
 node_assert_1.default.equal(countWords("War and Peace"), 3);

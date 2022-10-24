@@ -1,14 +1,14 @@
 "use strict";
-const test = {};
+var test = {};
 test.name = "Kevin";
 test.age = 976;
-const bird1 = { wings: 2 };
-const bird2 = { wings: 2 };
-const bird3 = bird1;
-let owl = { wings: 2, nocturnal: true };
-let chicken = { wings: 2, colourful: false, flies: false };
-const cat = {};
-const characters = [
+var bird1 = { wings: 2 };
+var bird2 = { wings: 2 };
+var bird3 = bird1;
+var owl = { wings: 2, nocturnal: true };
+var chicken = { wings: 2, colourful: false, flies: false };
+var cat = {};
+var characters = [
     {
         name: "Luke Skywalker",
         height: "172",
@@ -90,7 +90,7 @@ const characters = [
     },
 ];
 characters[0];
-const darth = {
+var darth = {
     name: "Darth Vader",
     mass: "120",
     height: "202",

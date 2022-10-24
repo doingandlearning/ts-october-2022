@@ -1,8 +1,10 @@
 import http from "node:http";
 import { photos } from "./photos.json";
-
+import { Photo as IPhoto } from "./photo";
 // console.log(photos);
 
+const photo: IPhoto = photos[0];
+console.log(photo, typeof photo);
 // destructuring
 // picking/selecting ...
 

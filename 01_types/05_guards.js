@@ -5,6 +5,6 @@ function padLeft(padding, input) {
     }
     return padding + input;
 }
-const usExchange = () => "1.134";
+var usExchange = function () { return "1.134"; };
 padLeft("£", usExchange());
 padLeft(10, "Current PM");
