@@ -1,16 +1,16 @@
 "use strict";
 {
-    var name_1 = "Kevin";
-    var a = 10;
-    var b = 5;
-    var c = a + b;
+    let name = "Kevin";
+    let a = 10;
+    let b = 5;
+    const c = a + b;
     a = Number.MAX_VALUE;
     // b = "";
-    var isOn = void 0;
+    let isOn;
 }
 {
     // any, never, void
-    var a = void 0;
+    let a;
     a = "Good morning BBC";
     a = 123;
     a = true;
@@ -26,28 +26,28 @@
     }
 }
 {
-    var c = add(1, 2);
+    const c = add(1, 2);
     function add(a, b) {
         return a + b;
     }
-    var multiply = function (a, b) {
+    const multiply = function (a, b) {
         return a * b;
     };
-    var d = multiply(2, 3);
-    var divide = function (a, b) { return a / b; };
+    const d = multiply(2, 3);
+    const divide = (a, b) => a / b;
 }
 {
-    var a = "Hello";
-    var b = "Hello";
-    var k = void 0;
+    const a = "Hello";
+    let b = "Hello";
+    let k;
     k = "Chromista";
-    var test_1 = "Chromista";
+    const test = "Chromista";
     function whichType() {
         return "Bacteria";
     }
 }
 {
-    var BoxSize = void 0;
+    let BoxSize;
     (function (BoxSize) {
         BoxSize["Small"] = "sm0120";
         BoxSize["Medium"] = "med12";
@@ -58,14 +58,14 @@
 }
 {
     // Array
-    var names = ["Emma", "Catherine", "Amanda"];
+    const names = ["Emma", "Catherine", "Amanda"];
     names.push("Michael");
     names.push("Ivan");
     names.push(7337);
-    var locations = [];
+    const locations = [];
     locations.push("Salford");
     locations.push("Glasgow");
     locations.push("London");
-    var tupleArray = void 0;
+    let tupleArray;
     tupleArray = [3, "parts", true];
 }
