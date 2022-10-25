@@ -31,6 +31,17 @@ If you like, download the JSON and do it all offline (no fetch) or try NodeFetch
 
 As of Node 18, fetch is now in Node core so you don't need to add a 3rd party dependency like node-fetch.
 
+Details:
+========
+
+- It would be helpful to install Live Server which can be found in the [VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+- Then right click on the index.html file in the review2 directory and launch with live server. This will open a new browser window which will refresh as the JS code changes.
+
+- In the review 2 directory, run `tsc --watch` which will monitor your src directory for any changes.
+
+- As you save and changes your TS, the JS will compile and the Live Server will refresh the page.
+
 Optional
 ========
 Provide a way to parameterize which user to retrieve (i.e. ask in the web page)
