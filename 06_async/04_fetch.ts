@@ -1,6 +1,4 @@
-import { setTimeout } from "node:timers/promises";
-
-async function getJson(url: string, signal: AbortSignal): Promise<void> {
+async function getJson(url: string, signal: AbortSignal): Promise<any> {
   try {
     const response = await fetch(url, { signal });
     if (!response.ok) {
@@ -11,22 +9,18 @@ async function getJson(url: string, signal: AbortSignal): Promise<void> {
   } catch (error: any) {
     if (error.name && error.name === "AbortError") {
       console.error("Request Aborted");
-      return;
+      return {};
     }
     console.log(error);
   }
 }
 
-async function wait(ms: number) {
-  await setTimeout(ms, () => {});
-  return {};
-}
 const ac = new AbortController();
 const { signal } = ac;
+run();
+ac.abort();
+
 async function run() {
   const data = await getJson("https://swapi.dev/api/people", signal);
   console.log(data);
 }
-
-run();
-ac.abort();
