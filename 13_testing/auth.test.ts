@@ -16,6 +16,7 @@ function isPasswordAllowed(password: string): boolean {
 
 test("tests are working", () => {
   expect(true).toBe(true);
+  expect(true).not.toBe(false);
 });
 
 // 🐨 write tests for valid and invalid passwords

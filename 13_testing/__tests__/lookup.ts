@@ -1,5 +1,4 @@
-import { describe, expect, test } from "@jest/globals";
-import { it } from "node:test";
+import { describe, expect, test, it } from "@jest/globals";
 
 // Data
 const users = [
@@ -30,7 +29,7 @@ const users = [
 ];
 
 // lookup()
-const lookup = (login, property) => {
+const lookup = (login: string, property: string) => {
   // START -- THIS IS WHERE YOUR CODE GOES
   // END
 };
