@@ -35,6 +35,11 @@ interface Product extends Entity {
   description: string;
 }
 
+interface Programmes extends Entity {
+  title: string;
+  runtime: number;
+}
+
 const mockUsers: User[] = [
   { id: "1", name: "Santa Claus" },
   { id: "2", name: "Jon Doe" },
@@ -44,27 +49,11 @@ const mockProducts: Product[] = [
   { id: "2", description: "Product 2" },
 ];
 
-type UsersApiResponse =
-  | {
-      status: "success";
-      data: User[];
-    }
-  | {
-      status: "error";
-      error: string;
-    };
+type ApiResponse<T extends Entity> =
+  | { status: "success"; data: T[] }
+  | { status: "error"; error: string };
 
-type ProductsApiResponse =
-  | {
-      status: "success";
-      data: Product[];
-    }
-  | {
-      status: "error";
-      error: string;
-    };
-
-async function fetchProducts(): Promise<ProductsApiResponse> {
+async function fetchProducts(): Promise<ApiResponse<Product>> {
   return new Promise((res) =>
     res({
       status: "success",
@@ -72,7 +61,7 @@ async function fetchProducts(): Promise<ProductsApiResponse> {
     })
   );
 }
-async function fetchUsers(): Promise<UsersApiResponse> {
+async function fetchUsers(): Promise<ApiResponse<User>> {
   return new Promise((res) =>
     res({
       status: "success",
