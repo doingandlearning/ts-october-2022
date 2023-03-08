@@ -12,34 +12,25 @@ import assert from "node:assert";
 
 // This will process a string and will capitalize the first letter of each word
 // but will make all the other letters lowercase.
-function toTitleCase(title: string): string {
-  return title
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
-    .join(" ");
-}
+function toTitleCase() {}
 
-assert.equal(toTitleCase("war AND peace"), "War And Peace");
-assert.equal(toTitleCase("Catcher in the Rye"), "Catcher In The Rye");
-assert.equal(toTitleCase("tO kILL A mOCKINGBIRD"), "To Kill A Mockingbird");
-console.log("toTitleCase passes.");
+// assert.equal(toTitleCase("war AND peace"), "War And Peace");
+// assert.equal(toTitleCase("Catcher in the Rye"), "Catcher In The Rye");
+// assert.equal(toTitleCase("tO kILL A mOCKINGBIRD"), "To Kill A Mockingbird");
+// console.log("toTitleCase passes.");
 
 // // // This will count the number of separate words within a string. Words are
 // // // delimited by spaces, dashes (-), or underscores (_).
-function countWords(title: string): number {
-  const words = title.split(/[ _-]/);
-  return words.length;
-}
+function countWords() {}
 
-assert.equal(countWords("War and Peace"), 3);
-assert.equal(countWords("catcher-in-the-rye"), 4);
-assert.equal(countWords("for_whom the-bell-tolls"), 5);
-console.log("countWords passes.");
+// assert.equal(countWords("War and Peace"), 3);
+// assert.equal(countWords("catcher-in-the-rye"), 4);
+// assert.equal(countWords("for_whom the-bell-tolls"), 5);
+// console.log("countWords passes.");
 
 // // This will return all the words that are within a string. Words are delimited
 // // by spaces, dashes (-), or underscores (_).
-// function toWords() {}
+function toWords() {}
 
 // assert.deepEqual(toWords("War and Peace"), ["War", "and", "Peace"]);
 // assert.deepEqual(toWords("catcher-in-the-rye"), [
@@ -59,7 +50,7 @@ console.log("countWords passes.");
 
 // // This will take a string and a number and return that same string repeated
 // // that number of times.
-// function repeat() {}
+function repeat() {}
 
 // assert.strictEqual(repeat("War", 3), "WarWarWar");
 // assert.strictEqual(repeat("rye", 1), "rye");
@@ -68,7 +59,7 @@ console.log("countWords passes.");
 
 // // This will return true if the string only has alpha characters (that is,
 // // letters). Test cases for this function are as follows:
-// function isAlpha() {}
+function isAlpha() {}
 
 // assert.strictEqual(isAlpha("War and Peace"), false);
 // assert.strictEqual(isAlpha("Atonement"), true);
@@ -77,7 +68,7 @@ console.log("countWords passes.");
 
 // // This will return true if the string is blank, that is, consists only of
 // // whitespace characters.
-// function isBlank() {}
+function isBlank() {}
 
 // assert.strictEqual(isBlank("War and Peace"), false);
 // assert.strictEqual(isBlank("         "), true);
